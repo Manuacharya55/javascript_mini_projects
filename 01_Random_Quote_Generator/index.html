@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+
+            background-color: rgb(32, 32, 32);
+        }
+
+        .quotes {
+            max-width: 100%;
+            width: 350px;
+            height: auto;
+            padding: 25px;
+            background-color: white;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+
+        .generate-btn {
+            padding: 15px 25px;
+            border-radius: 25px;
+            border: none;
+            background-color: #d1001f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="quotes">
+
+        </div>
+        <button class="generate-btn">Generate</button>
+    </div>
+
+    <script>
+        const quotesArray = [
+            "The only way to do great work is to love what you do.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "The only limit to our realization of tomorrow will be our doubts of today.",
+            "Life is what happens when you're busy making other plans.",
+            "It always seems impossible until it's done.",
+            "Believe you can and you're halfway there.",
+            "The only thing we have to fear is fear itself.",
+            "In three words I can sum up everything I've learned about life: it goes on.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "It is never too late to be what you might have been.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "Strive not to be a success, but rather to be of value.",
+            "The best way to predict the future is to create it.",
+            "The only person you are destined to become is the person you decide to be.",
+            "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+            "Do not wait to strike till the iron is hot, but make it hot by striking.",
+            "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "If you want to lift yourself up, lift up someone else.",
+            "The purpose of our lives is to be happy.",
+            "Success usually comes to those who are too busy to be looking for it."
+        ];
+        
+        const generateQuote = document.querySelector('.generate-btn');
+        const quotes = document.querySelector('.quotes');
+
+        generateQuote.addEventListener('click', () => {
+            const randomIndex = Math.ceil(Math.random()*(quotesArray.length-2));
+           quotes.innerHTML = `<p>${quotesArray[randomIndex]}</p>`
+        })
+    </script>
+</body>
+
+</html>

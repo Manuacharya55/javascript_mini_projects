@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body,
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            background-color: rgb(36, 35, 35);
+        }
+
+        .image-slider {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            width: 600px;
+            height: 400px;
+            border-radius: 25px;
+            position: absolute;
+            transition: all ease 0.5s;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: #37B9F1;
+            color: white;
+           font-size: 1.3rem;
+            margin: 15px;
+            border-radius: 50%;
+        }
+
+        @media(max-width:700px){
+            .container{
+                padding: 20px;
+            }
+            .image-slider,.slides{
+                width: 100%;
+            }
+            .slides{
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="image-slider">
+            <img src="https://img.freepik.com/free-vector/3d-effect-abstract-textured-shapes-background_52683-29877.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais"
+                alt="" class="slides slide-1">
+            <img src="https://img.freepik.com/free-photo/easter-decorative-eggs-arrangement_23-2150245761.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais"
+                alt="" class="slides slide-2">
+            <img src="https://img.freepik.com/free-vector/3d-retro-concept-geometric-stage_52683-31291.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais"
+                alt="" class="slides slide-3">
+            <img src="https://img.freepik.com/free-vector/gradient-3d-geometric-background_52683-76853.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais"
+                alt="" class="slides slide-4">
+            <img src="https://img.freepik.com/free-vector/realistic-3d-shapes-floating-background_23-2148916783.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais"
+                alt="" class="slides slide-5">
+        </div>
+        <div>
+            <button class="previous"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+
+        const slides = document.querySelectorAll('.slides');
+        let count = 1;
+        const next = document.querySelector('.next');
+        const previous = document.querySelector('.previous');
+        let zindex = 10;
+
+        slides.forEach((value)=>{
+            value.style.zIndex = zindex;
+            zindex -= 2
+        })
+
+        next.addEventListener('click', () => {
+            if (count <= 4) {
+                slides[count - 1].style.transform = `translateX(${count * -100}%)`
+                count++;
+            }
+        })
+
+        previous.addEventListener('click', () => {
+            if (count > 1) {
+                slides[count - 2].style.transform = `translateX(0%)`
+                count--;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating System</title>
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #37B9F1;
+        }
+
+        .ratings-holder {
+            max-width: 350px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+            background: white;
+        }
+
+        .ratings {
+            width: 100%;
+            height: 100%;
+
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        .stars-holder {
+            width: 100%;
+            padding: 15px;
+
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fa-star {
+            font-size: 1.6rem;
+            color: #FFD700;
+        }
+
+        form,
+        textarea,
+        .post {
+            width: 100%;
+            resize: none;
+        }
+
+        textarea,
+        .post {
+            padding: 15px;
+            border: 1px solid rgb(198, 196, 196);
+            border-radius: 8px;
+        }
+
+        .post {
+            border: none;
+            color: white;
+            background-color: #37B9F1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ratings-holder">
+            <div class="ratings">
+                <p>How was your experience?</p>
+
+                <div class="stars-holder">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <form action="">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Describe your experience"></textarea>
+                    <button class="post">POST</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const stars = document.querySelectorAll('.fa-star');
+
+        const removeClass = () => {
+            stars.forEach((star) => {
+                star.classList.remove('fa-solid')
+            })
+        }
+
+        const addClass = (index) => {
+            stars.forEach((star, starIndex) => {
+                star.classList.toggle('fa-solid', starIndex <= index)
+            })
+        }
+
+        stars.forEach((value, index) => {
+            value.addEventListener('click', () => {
+                removeClass();
+                addClass(index);
+            })
+        })
+
+        document.querySelector('.post').addEventListener('click', () => {
+            alert("THANK YOU");
+        })
+    </script>
+</body>
+
+</html>

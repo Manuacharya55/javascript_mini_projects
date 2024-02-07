@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('https://img.freepik.com/free-photo/view-3d-forest-landscape-with-mountains-sky_23-2150800461.jpg?size=626&ext=jpg&ga=GA1.1.1327082181.1706074515&semt=ais');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            backdrop-filter: blur(5px);
+        }
+
+        .container::before{
+            content: 'Digital Clock';
+            position: absolute;
+            top: 100px;
+
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 3rem;
+            font-weight: 600;
+            color: rgb(2, 56, 7);
+            
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(50px);
+        }
+        .hours,
+        .minutes,
+        .seconds {
+            width: 150px;
+            height: 150px;
+            font-size: 5rem;
+
+            background-color: rgba(255,255,255,0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px(0, 0, 0, 0.5);
+
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+    </div>
+
+    <script>
+
+        const getCurrentTime = () => {
+            const date = new Date()
+            const hour = date.getHours().toString().padStart(2, '0');
+            const minutes = date.getMinutes().toString().padStart(2, '0');
+            const seconds = date.getSeconds().toString().padStart(2, '0');
+            displayTime(hour, minutes, seconds)
+        }
+
+        const displayTime = (hours, minutes, seconds) => {
+            document.querySelector('.hours').innerHTML = hours;
+            document.querySelector('.minutes').innerHTML = minutes;
+            document.querySelector('.seconds').innerHTML = seconds;
+        }
+
+        setInterval(getCurrentTime, 1000)
+
+    </script>
+</body>
+
+</html>

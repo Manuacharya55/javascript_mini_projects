@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+    --main-color: #de0a16;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--main-color)
+}
+
+.todo-list-holder {
+    max-width: 350px;
+    width: 100%;
+    padding: 10px;
+}
+
+.list {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#task-name {
+    padding: 0px 10px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.add-task {
+    padding: 15px 15px;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+
+.all-task-holder {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.task {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.task .taskCheckbox {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--main-color);
+}
+
+.task label {
+    margin: 0px 10px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+.complete label {
+    text-decoration: line-through;
+}
+
+
+@media (max-width:350px) {
+    .container{
+        padding: 10px;
+    }
+    .todo-list-holder{
+        padding: 0px;
+    }
+    form{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #task-name,.add-task{
+        width: 100%;
+        padding: 10px;
+    }
+}

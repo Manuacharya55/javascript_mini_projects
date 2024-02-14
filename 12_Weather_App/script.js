@@ -16,7 +16,8 @@ searchButton.addEventListener('click',(e)=>{
 })
 
 const fetchWeatherData = async (countryName) =>{
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${countryName},IN&appid=0968e14c20f97fb5e5b0ae4956876d82`;
+    // make sure to keep url in https because when used on http then request is blocked
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${countryName},IN&appid=0968e14c20f97fb5e5b0ae4956876d82`;
 
     const fetchedData = await fetch(URL);
     const jsonData = await fetchedData.json();

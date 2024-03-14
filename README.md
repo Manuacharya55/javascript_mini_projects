@@ -9,3 +9,11 @@
 |Day-6| BMI_Calculator | [Demo](https://manuacharya55.github.io/javascript_mini_projects/06_BMI_Calculator)|
 |Day-7| Digital Clock | [Demo](https://manuacharya55.github.io/javascript_mini_projects/07_Digital_Clock)|
 |Day-8| Countdown Timer | [Demo](https://manuacharya55.github.io/javascript_mini_projects/08_CountDown_Timer)|
+|Day-9| Calculator | [Demo](https://manuacharya55.github.io/javascript_mini_projects/09_Calculator)|
+|Day-10| Github User Finder | [Demo](https://manuacharya55.github.io/javascript_mini_projects/10_Github_User_Finder)|
+|Day-11| Todo List | [Demo](https://manuacharya55.github.io/javascript_mini_projects/11_Todo_Lists)|
+|Day-12| Weather App | [Demo](https://manuacharya55.github.io/javascript_mini_projects/12_Weather_App)|
+|Day-13| Memory Game | [Demo](https://manuacharya55.github.io/javascript_mini_projects/13_Memory_Game)|
+|Day-14| Password Generator | [Demo](https://manuacharya55.github.io/javascript_mini_projects/14_Password_Generator)|
+|Day-15| Simple Quiz App | [Demo](https://manuacharya55.github.io/javascript_mini_projects/15_Simple_Quiz_App)|
+|Day-16| Pomodoro Timer | [Demo](https://manuacharya55.github.io/javascript_mini_projects/16_Pomodoro_Timer)|

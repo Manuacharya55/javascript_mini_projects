@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Feedback</title>
+    <link rel="icon" type="image/png"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+        :root {
+            --main-color: #1AA7EC;
+            --white-shade: white;
+            --box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+
+        }
+
+        .container {
+            padding: 25px;
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--main-color);
+        }
+
+        h1{
+            color: var(--white-shade);
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card-holder {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card {
+            max-width: 300px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: var(--white-shade);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>All User Reviews</h1>
+        <div class="card-holder">
+
+        </div>
+    </div>
+    <script>
+        const feedbackArray = JSON.parse(localStorage.getItem('feedback'));
+        const container = document.querySelector('.card-holder');
+        feedbackArray.forEach((element) => {
+            container.innerHTML += `<div class="card">
+            <span class="first-name">${element.name}</span>
+            <span class="Phone-number">${element.phnumber}</span>
+            <span class="email">${element.email}</span>
+            <span class="message">${element.userFeedback}</span>
+        </div>`
+        })
+
+    </script>
+</body>
+
+</html>

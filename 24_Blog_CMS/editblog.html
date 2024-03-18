@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <style>
+        .form-holder{
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 25%;
+        }
+        .fa-xmark{
+            float: right;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <h1>QuickReads</h1>
+            <ul>
+                <li><a href="./index.html">All Blogs</a></li>
+                <li><a href="./addblog.html">Add blogs</a></li>
+                <li><a href="./editblog.html">Manage blogs</a></li>
+            </ul>
+        </nav>
+        <div class="all-blogs">
+
+        </div>
+
+        <form action="#" class="form-holder">
+            <i class="fa-solid fa-xmark"></i>
+            <h1>Add New Blog</h1>
+            <div class="column">
+                <div class="row">
+                    <label for="title">Blog Title</label>
+                    <input type="text" name="" id="title" placeholder="enter blog title">
+                </div>
+
+                <div class="row">
+                    <label for="topic">Blog Topic</label>
+                    <input type="text" name="" id="topic" placeholder="enter blog topic">
+                </div>
+            </div>
+
+            <label for="desc">Blog Description</label>
+            <textarea name="" id="desc" cols="30" rows="10"></textarea>
+
+            <div class="column">
+                <div class="row">
+                    <label for="credentials">Credentials</label>
+                    <input type="text" name="" id="credentials" placeholder="please enter credentials">
+                </div>
+
+                <div class="row">
+                    <label for="cover-img">Cover Image</label>
+                    <input type="text" name="" id="cover-img" placeholder="please paste image link here">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="row">
+                    <label for="sub-img">Sub Image 1</label>
+                    <input type="text" name="" id="sub-img1" class="sub-img" placeholder="please paste image link here">
+                </div>
+                <div class="row">
+                    <label for="sub-img">Sub Image 2</label>
+                    <input type="text" name="" id="sub-img2" class="sub-img" placeholder="please paste image link here">
+                </div>
+            </div>
+
+            <button class="update">Update</button>
+        </form>
+    </div>
+    <script src="./editblogs.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <nav class="nav-bar">
+            <h1>QuickReads</h1>
+            <ul>
+                <li><a href="./index.html">All Blogs</a></li>
+                <li><a href="./addblog.html">Add blogs</a></li>
+                <li><a href="./editblog.html">Manage blogs</a></li>
+            </ul>
+        </nav>
+        <div class="blog-data"></div>
+    </div>
+    <script>
+        const urllink = window.location.href;
+        const params = new URLSearchParams(urllink.split('?')[1]);
+        const idValue = params.get('id');
+
+        const blogArr = JSON.parse(localStorage.getItem('blogarray')) || [];
+        const blogdata = document.querySelector('.blog-data');
+
+        document.title = blogArr[idValue].title;
+        blogdata.innerHTML = `
+<h1 class="blog-title">${blogArr[idValue].title}</h1>
+<img src="${blogArr[idValue].coverimage}" class="main-img">
+<span class="author">Author : ${blogArr[idValue].credentials}</span>
+<span class="date">${blogArr[idValue].date}</span>
+<img src="${blogArr[idValue].subimg1}"class="sub-img">
+<p class="desc">${blogArr[idValue].description}</p>
+<img src="${blogArr[idValue].subimg2}"class="sub-img">
+<h2 class="thanks">Thank You For Reading</h2>
+`
+    </script>
+</body>
+
+</html>

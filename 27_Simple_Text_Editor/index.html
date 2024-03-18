@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Text Editor</h1>
+        <div class="editor">
+            <div class="buttons-holder">
+
+                <div class="font-style">
+                    <button class="font-styles" id="bold"><i class="fa-solid fa-bold"></i></button>
+                    <button class="font-styles" id="italic"><i class="fa-solid fa-italic"></i></button>
+                    <button class="font-styles" id="underline"><i class="fa-solid fa-underline"></i></button>
+                </div>
+
+                <div class="alignment">
+                    <button class="alignment" id="left"><i class="fa-solid fa-align-left"></i></button>
+                    <button class="alignment" id="center"><i class="fa-solid fa-align-center"></i></button>
+                    <button class="alignment" id="right"><i class="fa-solid fa-align-right"></i></button>
+                </div>
+
+                <div class="text-design">
+                    <select name="" id="font-family" class="font-family">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Concert One">Concert One</option>
+                        <option value="Sofia">Sofia</option>
+                    </select>
+    
+                    <!-- <input type="number" name="" id="font-size" value="15"> -->
+                    <span class="font-size">15</span>
+                    <input type="range" name="" id="font-size" minlength="1" maxlength="100" value="15">
+                </div>
+
+                <div class="colors">
+                    <span>Font Color</span>
+                    <input type="color" name="" id="text-color" class="text-color">
+                </div>
+            </div>
+            <div id="text-board" contenteditable="true">
+                <!-- ajkfalsdfhkas -->
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

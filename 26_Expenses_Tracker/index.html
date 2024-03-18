@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Expenses Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LyPc-3RyDDu9tbAMQEI424qyFNvEdFFzBA&usqp=CAU">
+</head>
+
+<body>
+    <div class="container">
+        <div class="meta-details">
+            <canvas class="graph-holder" height="300px">
+
+            </canvas>
+        </div>
+        <div class="expense-details">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="form-holder">
+            <form action="">
+                <label for="amount">Enter Amount</label>
+                <input type="text" name="" id="amount">
+                <label for="desc">Description</label>
+                <input type="text" name="" id="desc">
+                <label for="category">Select Category</label>
+                <select name="" id="category">
+                    <option value="" disabled selected hidden>Select Category</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Food And Drinks">Food And Drinks</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Others">Others</option>
+                </select>
+                <label for="userdate">Select Date</label>
+                <input type="date" name="" id="userdate">
+
+                <button class="add">Add Expense</button>
+            </form>
+        </div>
+
+        <i class="fa-solid fa-pen form-pen"></i>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./chart.js"></script>
+</body>
+
+</html>

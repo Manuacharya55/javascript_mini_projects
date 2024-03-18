@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Metal+Mania&family=Poppins:wght@300;400&family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Metal+Mania&family=Poppins:wght@300;400&family=Sofia&display=swap');
+:root {
+    --main-color: #1AA7EC;
+    --white-shade: white;
+    --box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items:center;
+    justify-content: flex-start;
+    background-color: var(--main-color);
+}
+
+h1{
+    color: var(--white-shade);
+    font-size: 4rem;
+    text-align: center;
+}
+.editor {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+
+    background-color: var(--white-shade);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.buttons-holder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.font-style,
+.alignment {
+    padding: 10px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white-shade);
+    color: var(--main-color);
+    border: 1px solid;
+
+}
+
+input {
+    padding: 10px;
+    width: 100px;
+}
+
+input[type="color"]{
+    margin-right: 15px;
+}
+#text-board{
+    width: 100%;
+    min-height: 300px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    font-size: 15px;
+}
+
+@media(max-width:600px){
+    html,body,.container{
+       height: auto;
+    }
+}
